@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { ITodoItem } from '../../interfaces/todo-item.interface';
 
@@ -11,4 +11,6 @@ import { ITodoItem } from '../../interfaces/todo-item.interface';
 })
 export class TodoListComponent {
   todoItems = input<ITodoItem[]>([]);
+  todoItemChange = output<ITodoItem>();
+  todoItemDelete = output<string>();
 }

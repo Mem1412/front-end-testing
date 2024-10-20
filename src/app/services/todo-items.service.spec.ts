@@ -77,6 +77,7 @@ describe('TodoItemsService', () => {
       url: `localhost:3000/todoItems/${id}`,
     });
     req.flush({});
+    expect().nothing();
   });
 
   afterEach(() => {
