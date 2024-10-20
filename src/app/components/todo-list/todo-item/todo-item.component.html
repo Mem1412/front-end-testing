@@ -1,0 +1,23 @@
+<div class="border-b border-gray-400 p-5">
+  <div class="flex justify-between items-center">
+    <div class="flex items-center *:cursor-pointer cursor-pointer">
+      <input
+        (change)="todoItemChange.emit(todoItem())"
+        class="w-4 h-4"
+        id="checkbox"
+        type="checkbox"
+        [(ngModel)]="todoItem().isDone"
+      />
+      <label
+        [ngClass]="{ 'text-gray-400 line-through': todoItem().isDone }"
+        for="checkbox"
+        class="ps-6"
+        data-test-id="text"
+        >{{ todoItem().text }}</label
+      >
+    </div>
+    <button (click)="todoItemDelete.emit()" data-test-id="delete">
+      <img src="trash.svg" width="15" height="15" />
+    </button>
+  </div>
+</div>
