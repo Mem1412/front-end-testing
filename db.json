@@ -1,29 +1,39 @@
 {
   "todoItems": [
     {
-      "id": "962a3ac5-a9df-48e1-a6e8-56f60bb1a6d7",
+      "id": "65f17d16-1a55-44d2-97fa-1d12b48b039e",
       "text": "Laundry",
-      "isDone": false
-    },
-    {
-      "id": "d2c15e19-8bc2-4b7d-9153-5d5e5f5b9ec2",
-      "text": "Grocery shopping",
       "isDone": true
     },
     {
-      "id": "1f6d72f1-b95e-4a2d-bf7d-70e4ea7b0fcb",
-      "text": "Prepare presentation",
+      "id": "d2274976-fe8a-4ad1-8acd-fadbb2626caf",
+      "text": "Cooking",
       "isDone": false
     },
     {
-      "id": "4c73f06e-1234-47b0-a82f-084a528dbf41",
-      "text": "Exercise",
-      "isDone": false
-    },
-    {
-      "id": "58f72f6b-0e73-438d-ae1b-118e1d43a3e7",
-      "text": "Read book",
+      "id": "38468899-2ac5-460a-b1e8-2ce3ec129882",
+      "text": "Studying",
       "isDone": true
+    },
+    {
+      "id": "81a36c46-91a2-4be0-b31e-decc7c49d1a5",
+      "text": "Learn Angular",
+      "isDone": false
+    },
+    {
+      "id": "687000e3-8973-49c5-bf38-6760d0080d89",
+      "text": "Write unit tests",
+      "isDone": false
+    },
+    {
+      "id": "46d52efc-c88e-4283-8082-fc8f95f6d135",
+      "text": "Refactor code",
+      "isDone": true
+    },
+    {
+      "id": "94646fe7-3874-4a61-95d0-f76f0e39af80",
+      "text": "Deploy new feature",
+      "isDone": false
     }
   ]
 }

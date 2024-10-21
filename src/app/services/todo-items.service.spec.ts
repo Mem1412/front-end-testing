@@ -51,18 +51,14 @@ describe('TodoItemsService', () => {
   });
 
   it('should send a POST request to add new todoItem', () => {
-    const mockItem: ITodoItem = {
-      id: '58f72f6b-0e73-438d-ae1b-118e1d43a3e7',
-      text: 'Read book',
-      isDone: true,
-    };
-    service.add(mockItem).subscribe();
+    const mockItemText = 'Test post request';
+    service.add(mockItemText).subscribe();
 
     const req = httpController.expectOne({
       method: 'POST',
       url: 'http://localhost:3000/todoItems',
     });
-    expect(req.request.body).toEqual(mockItem);
+    expect(req.request.body.text).toEqual(mockItemText);
 
     req.flush({});
   });

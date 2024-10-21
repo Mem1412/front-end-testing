@@ -31,7 +31,7 @@ describe('CreateTodoItemComponent', () => {
     input.value = 'test content';
     addButton.click();
     expect(component.createTodoItem.emit).toHaveBeenCalledOnceWith(
-      'test content'
+      'test content',
     );
   });
 

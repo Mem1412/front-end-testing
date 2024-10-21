@@ -9,13 +9,20 @@ export class TodoItemsService {
   private readonly httpClient = inject(HttpClient);
 
   getAll() {
-    return this.httpClient.get<ITodoItem[]>('http://localhost:3000/todoItems');
+    return this.httpClient.get<ITodoItem[]>(
+      'http://loca' + 'lhost:3000/todoItems',
+    );
   }
 
-  add(item: ITodoItem) {
+  add(text: string) {
+    const todoItem: ITodoItem = {
+      id: crypto.randomUUID(),
+      text,
+      isDone: false,
+    };
     return this.httpClient.post<ITodoItem>(
       'http://localhost:3000/todoItems',
-      item,
+      todoItem,
     );
   }
 

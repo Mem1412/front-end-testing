@@ -23,6 +23,28 @@ export class AppComponent implements OnInit {
   private readonly todoItemsService = inject(TodoItemsService);
 
   ngOnInit() {
+    this.getTodoItems();
+  }
+
+  addTodoItem(itemText: string) {
+    this.todoItemsService.add(itemText).subscribe(() => {
+      this.getTodoItems();
+    });
+  }
+
+  deleteTodoItem(id: string) {
+    this.todoItemsService.delete(id).subscribe(() => {
+      this.getTodoItems();
+    });
+  }
+
+  patchTodoItem(todoItem: ITodoItem) {
+    this.todoItemsService.patch(todoItem.id, todoItem.isDone).subscribe(() => {
+      this.getTodoItems();
+    });
+  }
+
+  private getTodoItems() {
     this.todoItemsService
       .getAll()
       .subscribe((items) => (this.todoItems = items));

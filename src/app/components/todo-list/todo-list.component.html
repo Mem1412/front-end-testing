@@ -1,7 +1,7 @@
 @for (todoItem of todoItems(); track todoItem.id) {
-<app-todo-item
-  (todoItemDelete)="todoItemDelete.emit(todoItem.id)"
-  (todoItemChange)="todoItemChange.emit($event)"
-  [todoItem]="todoItem"
-/>
+  <app-todo-item
+    (todoItemDelete)="todoItemDelete.emit(todoItem.id)"
+    (todoItemChange)="todoItemChange.emit($event)"
+    [todoItem]="todoItem"
+  />
 }

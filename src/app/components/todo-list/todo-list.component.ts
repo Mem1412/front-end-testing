@@ -13,4 +13,8 @@ export class TodoListComponent {
   todoItems = input<ITodoItem[]>([]);
   todoItemChange = output<ITodoItem>();
   todoItemDelete = output<string>();
+
+  log(e: any) {
+    console.log(e);
+  }
 }
