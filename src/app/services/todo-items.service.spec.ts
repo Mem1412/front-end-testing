@@ -5,20 +5,18 @@ import {
   HttpTestingController,
   provideHttpClientTesting,
 } from '@angular/common/http/testing';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { ITodoItem } from '../interfaces/todo-item.interface';
 
 describe('TodoItemsService', () => {
   let service: TodoItemsService;
   let httpController: HttpTestingController;
-  let httpClient: HttpClient;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     service = TestBed.inject(TodoItemsService);
-    httpClient = TestBed.inject(HttpClient);
     httpController = TestBed.inject(HttpTestingController);
   });
 
@@ -46,7 +44,7 @@ describe('TodoItemsService', () => {
 
     const request = httpController.expectOne({
       method: 'GET',
-      url: 'localhost:3000/todoItems',
+      url: 'http://localhost:3000/todoItems',
     });
 
     request.flush(mockResponse);
@@ -62,7 +60,7 @@ describe('TodoItemsService', () => {
 
     const req = httpController.expectOne({
       method: 'POST',
-      url: 'localhost:3000/todoItems',
+      url: 'http://localhost:3000/todoItems',
     });
     expect(req.request.body).toEqual(mockItem);
 
@@ -74,8 +72,20 @@ describe('TodoItemsService', () => {
     service.delete(id).subscribe();
     const req = httpController.expectOne({
       method: 'DELETE',
-      url: `localhost:3000/todoItems/${id}`,
+      url: `http://localhost:3000/todoItems/${id}`,
     });
+    req.flush({});
+    expect().nothing();
+  });
+
+  it('should send PATCH request to patch a todoItem', () => {
+    const id = '4c73f06e-1234-47b0-a82f-084a528dbf41';
+    service.patch(id, true).subscribe();
+    const req = httpController.expectOne({
+      method: 'PATCH',
+      url: `http://localhost:3000/todoItems/${id}`,
+    });
+    expect(req.request.body).toEqual({ isDone: true });
     req.flush({});
     expect().nothing();
   });

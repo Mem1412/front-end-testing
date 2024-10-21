@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TodoListComponent } from './todo-list.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { By } from '@angular/platform-browser';
-import { ComponentRef } from '@angular/core';
 import { ITodoItem } from '../../interfaces/todo-item.interface';
 
 describe('TodoListComponent', () => {
@@ -27,7 +26,7 @@ describe('TodoListComponent', () => {
     ]);
     fixture.detectChanges();
     todoItemComponent = fixture.debugElement.query(
-      By.directive(TodoItemComponent)
+      By.directive(TodoItemComponent),
     ).componentInstance;
   });
 
@@ -44,7 +43,7 @@ describe('TodoListComponent', () => {
     spyOn(component.todoItemChange, 'emit');
     todoItemComponent.todoItemChange.emit(mockTodoItem);
     expect(component.todoItemChange.emit).toHaveBeenCalledOnceWith(
-      mockTodoItem
+      mockTodoItem,
     );
   });
 
@@ -52,7 +51,7 @@ describe('TodoListComponent', () => {
     spyOn(component.todoItemDelete, 'emit');
     todoItemComponent.todoItemDelete.emit();
     expect(component.todoItemDelete.emit).toHaveBeenCalledOnceWith(
-      todoItemComponent.todoItem().id
+      todoItemComponent.todoItem().id,
     );
   });
 });
