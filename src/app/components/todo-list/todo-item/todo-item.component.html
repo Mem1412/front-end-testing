@@ -1,22 +1,23 @@
-<div class="border-b border-gray-400 p-5">
+<div data-test-id="todoItem" class="border-b border-gray-400 p-5">
   <div class="flex justify-between items-center">
     <div class="flex items-center *:cursor-pointer cursor-pointer">
       <input
         (change)="todoItemChange.emit(todoItem())"
         [(ngModel)]="todoItem().isDone"
         class="w-4 h-4"
-        id="checkbox/{{todoItem().text}}"
+        id="checkbox/{{ todoItem().text }}"
         type="checkbox"
       />
       <label
         [ngClass]="{ 'text-gray-400 line-through': todoItem().isDone }"
         class="ps-6"
         data-test-id="text"
-        for="checkbox/{{todoItem().text}}"
-      >{{ todoItem().text }}</label>
+        for="checkbox/{{ todoItem().text }}"
+        >{{ todoItem().text }}</label
+      >
     </div>
     <button (click)="todoItemDelete.emit()" data-test-id="delete">
-      <img height="15" src="trash.svg" width="15"/>
+      <img height="15" src="trash.svg" width="15" />
     </button>
   </div>
 </div>
