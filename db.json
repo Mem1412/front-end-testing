@@ -31,8 +31,23 @@
       "isDone": true
     },
     {
-      "id": "4b41b1d9-b031-4db8-b775-2a30e20609ff",
-      "text": "Testing checkbox",
+      "id": "959acb3f-83c7-4cc7-bb82-66561f124f33",
+      "text": "Test add item 101",
+      "isDone": false
+    },
+    {
+      "id": "d3d5c2bc-d4b9-4afb-b4ad-610d1b8cad30",
+      "text": "Testing list 1",
+      "isDone": false
+    },
+    {
+      "id": "26e37171-71b7-45e7-a210-d9f905b5cc93",
+      "text": "Testing list 2",
+      "isDone": false
+    },
+    {
+      "id": "d8d4286c-cd0f-41e4-9146-446827a51ebb",
+      "text": "test-mark-item",
       "isDone": false
     }
   ]
