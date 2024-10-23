@@ -31,21 +31,21 @@ describe('AppComponent', () => {
   let createTodoItemComponent: CreateTodoItemComponent;
   let todoListComponent: TodoListComponent;
   let todoItemsService: any;
-  let mockTodoItemsService: any;
+  let todoItemsServiceStub: any;
 
   beforeEach(async () => {
-    mockTodoItemsService = jasmine.createSpyObj('TodoService', [
+    todoItemsServiceStub = jasmine.createSpyObj('TodoService', [
       'getAll',
       'add',
       'delete',
       'patch',
     ]);
-    mockTodoItemsService.getAll.and.returnValue(of(mockedTodoItems));
+    todoItemsServiceStub.getAll.and.returnValue(of(mockedTodoItems));
 
     await TestBed.configureTestingModule({
       imports: [AppComponent],
       providers: [
-        { provide: TodoItemsService, useValue: mockTodoItemsService },
+        { provide: TodoItemsService, useValue: todoItemsServiceStub },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(AppComponent);
@@ -95,6 +95,8 @@ describe('AppComponent', () => {
   });
 
   it('should call TodoItemsService.patch with the correct id and inverted isDone value when todoItemChange event is fired', () => {
+    todoItemsService.patch.and.returnValue(of(''));
+
     todoListComponent.todoItemChange.emit({
       id: '878d13dc-a8df-4a12-873d-62660310c826',
       text: 'Cook food',
