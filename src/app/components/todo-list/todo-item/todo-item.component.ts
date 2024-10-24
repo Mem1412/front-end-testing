@@ -1,5 +1,4 @@
-import { Component, input, output } from '@angular/core';
-import { ITodoItem } from '../../../interfaces/todo-item.interface';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
 
@@ -11,7 +10,7 @@ import { NgClass } from '@angular/common';
   styleUrl: './todo-item.component.scss',
 })
 export class TodoItemComponent {
-  todoItem = input.required<ITodoItem>();
-  todoItemChange = output<ITodoItem>();
-  todoItemDelete = output<void>();
+  // todoItem = input.required<ITodoItem>();
+  // todoItemChange = output<ITodoItem>();
+  // todoItemDelete = output<void>();
 }

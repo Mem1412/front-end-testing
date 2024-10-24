@@ -1,6 +1,5 @@
-import { Component, input, output } from '@angular/core';
+import { Component } from '@angular/core';
 import { TodoItemComponent } from './todo-item/todo-item.component';
-import { ITodoItem } from '../../interfaces/todo-item.interface';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,11 +9,7 @@ import { ITodoItem } from '../../interfaces/todo-item.interface';
   styleUrl: './todo-list.component.scss',
 })
 export class TodoListComponent {
-  todoItems = input<ITodoItem[]>([]);
-  todoItemChange = output<ITodoItem>();
-  todoItemDelete = output<string>();
-
-  log(e: any) {
-    console.log(e);
-  }
+  // todoItems = input<ITodoItem[]>([]);
+  // todoItemChange = output<ITodoItem>();
+  // todoItemDelete = output<string>();
 }

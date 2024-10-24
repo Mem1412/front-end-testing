@@ -1,4 +1,4 @@
-import { Component, ElementRef, output, viewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-create-todo-item',
@@ -8,13 +8,13 @@ import { Component, ElementRef, output, viewChild } from '@angular/core';
   styleUrl: './create-todo-item.component.scss',
 })
 export class CreateTodoItemComponent {
-  input = viewChild.required<ElementRef<HTMLInputElement>>('input');
-  createTodoItem = output<string>();
-
-  emitCreateTodoItem() {
-    const value = this.input().nativeElement.value;
-    if (!value) return;
-    this.createTodoItem.emit(value);
-    this.input().nativeElement.value = '';
-  }
+  // input = viewChild.required<ElementRef<HTMLInputElement>>('input');
+  // createTodoItem = output<string>();
+  //
+  // emitCreateTodoItem() {
+  //   const value = this.input().nativeElement.value;
+  //   if (!value) return;
+  //   this.createTodoItem.emit(value);
+  //   this.input().nativeElement.value = '';
+  // }
 }
