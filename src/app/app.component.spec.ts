@@ -1,24 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-// const mockedTodoItems: ITodoItem[] = [
-//   {
-//     id: '4c73f06e-1234-47b0-a82f-084a528dbf41',
-//     text: 'Exercise',
-//     isDone: false,
-//   },
-//   {
-//     id: '58f72f6b-0e73-438d-ae1b-118e1d43a3e7',
-//     text: 'Read book',
-//     isDone: true,
-//   },
-//   {
-//     id: '878d13dc-a8df-4a12-873d-62660310c826',
-//     text: 'Cook food',
-//     isDone: false,
-//   },
-// ];
-
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -26,8 +8,27 @@ describe('AppComponent', () => {
   // let todoListComponent: TodoListComponent;
   // let todoItemsService: any;
   // let todoItemsServiceStub: any;
+  // let mockedTodoItems: ITodoItem[];
 
   beforeEach(async () => {
+    // mockedTodoItems = [
+    //   {
+    //     id: '4c73f06e-1234-47b0-a82f-084a528dbf41',
+    //     text: 'Exercise',
+    //     isDone: false,
+    //   },
+    //   {
+    //     id: '58f72f6b-0e73-438d-ae1b-118e1d43a3e7',
+    //     text: 'Read book',
+    //     isDone: true,
+    //   },
+    //   {
+    //     id: '878d13dc-a8df-4a12-873d-62660310c826',
+    //     text: 'Cook food',
+    //     isDone: false,
+    //   },
+    // ];
+
     // todoItemsServiceStub = jasmine.createSpyObj('TodoService', [
     //   'getAll',
     //   'add',
