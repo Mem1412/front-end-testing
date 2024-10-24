@@ -7,7 +7,7 @@ export class TodoItemsService {
   // private readonly httpClient = inject(HttpClient);
   // getAll() {
   //   return this.httpClient.get<ITodoItem[]>(
-  //     'http://loca' + 'lhost:3000/todoItems',
+  //     'http://localhost:3000/todoItems',
   //   );
   // }
   // add(text: string) {
