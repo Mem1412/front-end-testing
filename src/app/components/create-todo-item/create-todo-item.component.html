@@ -1,15 +1,15 @@
-<!--<div class="flex gap-4 items-center">-->
-<!--  <input-->
-<!--    #input-->
-<!--    type="text"-->
-<!--    class="flex-1 border border-sky-600 p-2 rounded-md"-->
-<!--    placeholder="Add new item"-->
-<!--  />-->
-<!--  <button-->
-<!--    data-test-id="addTodoItem"-->
-<!--    (click)="emitCreateTodoItem()"-->
-<!--    class="px-3.5 py-3 rounded-full bg-sky-600"-->
-<!--  >-->
-<!--    <img src="plus.svg" width="20" />-->
-<!--  </button>-->
-<!--</div>-->
+<div class="flex gap-4 items-center">
+  <input
+    #input
+    class="flex-1 border border-sky-600 p-2 rounded-md"
+    placeholder="Add new item"
+    type="text"
+  />
+  <button
+    (click)="emitCreateTodoItem()"
+    class="px-3.5 py-3 rounded-full bg-sky-600"
+    data-test-id="addTodoItem"
+  >
+    <img src="plus.svg" width="20"/>
+  </button>
+</div>

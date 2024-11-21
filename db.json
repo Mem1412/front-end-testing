@@ -19,36 +19,6 @@
       "id": "81a36c46-91a2-4be0-b31e-decc7c49d1a5",
       "text": "Learn Angular",
       "isDone": false
-    },
-    {
-      "id": "687000e3-8973-49c5-bf38-6760d0080d89",
-      "text": "Write unit tests",
-      "isDone": false
-    },
-    {
-      "id": "46d52efc-c88e-4283-8082-fc8f95f6d135",
-      "text": "Refactor code",
-      "isDone": true
-    },
-    {
-      "id": "959acb3f-83c7-4cc7-bb82-66561f124f33",
-      "text": "Test add item 101",
-      "isDone": false
-    },
-    {
-      "id": "d3d5c2bc-d4b9-4afb-b4ad-610d1b8cad30",
-      "text": "Testing list 1",
-      "isDone": false
-    },
-    {
-      "id": "26e37171-71b7-45e7-a210-d9f905b5cc93",
-      "text": "Testing list 2",
-      "isDone": false
-    },
-    {
-      "id": "d8d4286c-cd0f-41e4-9146-446827a51ebb",
-      "text": "test-mark-item",
-      "isDone": false
     }
   ]
 }
